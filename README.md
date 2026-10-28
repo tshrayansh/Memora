@@ -13,6 +13,7 @@ The platform runs entirely in modern web browsers, provides millisecond-precisio
 ## 📑 Table of Contents
 - [Project Overview & Experimental Paradigms](#-project-overview--experimental-paradigms)
 - [Primary Empirical Results](#-primary-empirical-results)
+- [Core Experimental Visualizations](#-core-experimental-visualizations)
 - [Key Cognitive Inferences & Deep Analysis](#-key-cognitive-inferences--deep-analysis)
 - [Platform Architecture](#-platform-architecture)
 - [Local Setup & Usage](#-local-setup--usage)
@@ -78,7 +79,23 @@ Based on empirical testing across **182 valid participants** ($M_{\text{age}} = 
 | **Working Memory** | Distractor Math Accuracy | 98.53% | 3.38% | Ceiling Compliance | — |
 | **False Memory** | True Item Recognition | 81.70% | 12.80% | Veridical Memory | — |
 | **False Memory** | Critical Lure False Alarm Rate | 59.52% | 32.86% | $t(55) = 4.88$, $p = 9.49 \times 10^{-6}$ | Cohen's $d = 0.65$ |
-| **False Memory** | Unrelated Foil Rejection Rate | 94.05% | 9.89% | High Discrim. | — |
+| **False Memory** | Unrelated Foil Rejection Rate | 94.05% | 9.89% | High Discrimination | — |
+
+---
+
+## 📈 Core Experimental Visualizations
+
+### 1. Stroop Task Performance (Selective Attention & Cognitive Interference)
+![Stroop Task Performance](assets/stroop_task_performance.png)
+*Figure 1: Mean reaction time (± SEM) under congruent vs. incongruent conditions demonstrating significant cognitive interference (+181.7 ms, $p < 10^{-13}$, Cohen's $d = 1.08$) alongside paired individual participant RT trajectories.*
+
+### 2. Working Memory Complex Operation Span (Capacity Degradation)
+![Working Memory Capacity](assets/working_memory_capacity.png)
+*Figure 2: Recall accuracy across 3-digit, 5-digit, and 7-digit loads under continuous mathematical distractor interference. Note the sharp drop at 7 digits ($p = 9.70 \times 10^{-11}$, Cohen's $d = 1.16$), marking the boundary of the working memory buffer.*
+
+### 3. DRM False Memory Paradigm (Semantic Reconstructive Error)
+![False Memory Performance](assets/false_memory_performance.png)
+*Figure 3: True item recall rate vs. non-presented critical lure false recall rate (± SEM) alongside individual distribution boxplots. Demonstrates associative memory distortion with nearly 60% false recognition of semantic lures.*
 
 ---
 
@@ -112,16 +129,20 @@ The repository is structured with pure modular vanilla JavaScript and zero runti
 
 ```
 COgnitive dashboard/
-├── index.html            # Main UI single-page application (4-stage flow)
-├── style.css             # Responsive styling, CSS tokens, and theme system
-├── app.js                # State management, onboarding logic, routing
-├── stroop.js             # Stroop engine, stimulus scheduler, high-precision timing
-├── memory.js             # Working memory engine, distractor equation generation
-├── falseMemory.js        # DRM paradigm controller, word lists, recognition tests
-├── data.js               # Stimulus banks, word pairs, arithmetic seeds
-├── export.js             # Metrics computation, Plotly rendering, CSV export
+├── assets/
+│   ├── stroop_task_performance.png   # Stroop RT & participant trajectories
+│   ├── working_memory_capacity.png    # Working memory load performance
+│   └── false_memory_performance.png   # DRM true vs. false recall rates
+├── index.html                         # Main UI single-page application (4-stage flow)
+├── style.css                          # Responsive styling, CSS tokens, and theme system
+├── app.js                             # State management, onboarding logic, routing
+├── stroop.js                          # Stroop engine, stimulus scheduler, timing
+├── memory.js                          # Working memory engine, distractor math equations
+├── falseMemory.js                     # DRM paradigm controller, word lists
+├── data.js                            # Stimulus banks, word pairs, arithmetic seeds
+├── export.js                          # Metrics computation, Plotly rendering, CSV export
 └── results/
-    └── findings.md       # Full statistical tables, ANOVA outputs, Welch's t-tests
+    └── findings.md                    # Full statistical tables, ANOVA outputs, t-tests
 ```
 
 ### Key Technical Characteristics

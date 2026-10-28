@@ -87,6 +87,9 @@ Participants studied lists of semantically related words (e.g., *sour, candy, su
   - Participants correctly rejected unrelated foils 94.05% of the time ($5.95\%$ false alarm rate on foils vs. $59.52\%$ on lures).
   - *Result*: Confirms that false memory is strongly driven by semantic activation networks rather than indiscriminate guessing or positive response bias.
 
+![DRM Paradigm Recognition Rates](../assets/false_memory_rates.png)
+*Figure: Mean "Yes" recognition rates across Target items (81.7%), Critical Lures (59.5%), and Unrelated Foils (16.1%).*
+
 ---
 
 ## 3. Demographic & Group-Level Analyses
@@ -112,6 +115,9 @@ Comparing Male ($n \in [27, 47]$ depending on task) vs. Female ($n \in [24, 29]$
 | **False Memory** | Critical Lure Recall (%) | 58.62% | 58.98% | -0.040 | 0.9684 | -0.011 | No |
 | **False Memory** | Foil Rejection Rate (%) | 93.96% | 93.91% | 0.019 | 0.9853 | 0.005 | No |
 | **False Memory** | Intrusion Rate (%) | 15.92% | 16.22% | -0.106 | 0.9158 | -0.029 | No |
+
+![Gender Bias Profile](../assets/gender_bias_profile.png)
+*Figure: Standardized Effect Sizes (Cohen's d) across all 17 cognitive and behavioral metrics comparing Men vs. Women. Only raw reaction times reached significance ($p < 0.05$); core interference and accuracy metrics remain gender-invariant.*
 
 ---
 
@@ -151,3 +157,4 @@ Testing correlations between self-reported prior-night sleep duration (cleaned: 
 | **Sleep vs. Working Memory (7-Digit Recall)** | -0.023 | 0.8753 | High-load memory retention intact across typical sleep ranges |
 | **Sleep vs. False Memory Intrusion Rate** | +0.046 | 0.7443 | Reconstructive memory errors independent of sleep variation |
 | **Sleep vs. Critical Lure Recall** | +0.103 | 0.4653 | Semantic activation resilient to acute sleep fluctuations |
+
