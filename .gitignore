@@ -1,0 +1,17 @@
+# Data & Analysis files (kept local, excluded from Git)
+*.csv
+*.tsv
+*.ipynb
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor configurations
+.vscode/
+.idea/
